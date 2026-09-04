@@ -22,13 +22,10 @@ remains the other supported path.
 third-party tap — it is not specific to this tap, and it is not a warning about
 its contents. `brew install` fails outright without it.
 
-**It goes away once `voxlang` is accepted into homebrew-core**, at which point the
-install is just `brew install voxlang` with no tap and no trust. Until then the
-three-line form above is the supported path, and this section is the reminder to
-delete it.
-
-Tracking: homebrew-core requires a stable (non-prerelease) version and has
-notability requirements, so submission is blocked until a `vX.Y.Z` release exists.
+**It is permanent for this tap.** An earlier version of this note said it would
+go away once `voxlang` reached homebrew-core. That was wrong: homebrew-core does
+not accept binary-only formulae, and this formula ships a prebuilt binary rather
+than building from source. There is no core submission to wait for.
 
 ## Maintaining the formula
 
