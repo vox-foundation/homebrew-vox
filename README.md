@@ -16,6 +16,20 @@ no useful message. Installing through this tap avoids that path entirely.
 `curl https://voxlang.org/voxup | sh` is unaffected for the same reason, and
 remains the other supported path.
 
+## The `brew trust` step is temporary
+
+`brew trust` exists because Homebrew 6 refuses to load **any** untrusted
+third-party tap — it is not specific to this tap, and it is not a warning about
+its contents. `brew install` fails outright without it.
+
+**It goes away once `voxlang` is accepted into homebrew-core**, at which point the
+install is just `brew install voxlang` with no tap and no trust. Until then the
+three-line form above is the supported path, and this section is the reminder to
+delete it.
+
+Tracking: homebrew-core requires a stable (non-prerelease) version and has
+notability requirements, so submission is blocked until a `vX.Y.Z` release exists.
+
 ## Maintaining the formula
 
 `Formula/vox.rb` is generated from a release's `checksums.txt`. The `version`,
